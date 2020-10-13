@@ -9,7 +9,7 @@ namespace RESTEncryption.AspNetCoreWebApp.Controllers.Api
     public class SampleServiceController : Controller
     {
         [HttpPost]
-        [TypeFilter(typeof(RequestBodyDecryptionFilter<SampleModel>))]
+        [TypeFilter(typeof(RequestBodyDecryptionFilter))]
         public IActionResult SampleAction([FromBody] SampleModel data)
         {
             return Ok("The action invoked successfully.");
